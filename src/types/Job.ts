@@ -15,4 +15,6 @@ export type Job = {
 
 export type AddJobAction = (newJob: Omit<Job, "id">) => void;
 
+export type UpdateJobAction = (updatedJob: Job) => void;
+
 export type DeleteJobAction = (id: string) => void;
