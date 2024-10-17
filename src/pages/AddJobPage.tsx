@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import { AddJobAction } from "../types/Job";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AddJobPage = ({ addJob }: { addJob: AddJobAction }) => {
   const [title, setTitle] = useState("");
@@ -33,6 +34,8 @@ const AddJobPage = ({ addJob }: { addJob: AddJobAction }) => {
     };
 
     addJob(newJob);
+
+    toast.success("Job Added Successfully!");
 
     return navigate("/jobs");
   };
