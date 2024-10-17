@@ -12,3 +12,5 @@ export type Job = {
     contactPhone: string;
   };
 };
+
+export type AddJobAction = (newJob: Omit<Job, "id">) => void;
