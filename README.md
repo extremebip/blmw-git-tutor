@@ -44,3 +44,11 @@ git push
 ```console
 git add .
 ```
+
+## Next step
+
+We will now use an example project to show how you can apply git features and commands on a real project. You can run this command to switch into the project branch:
+
+```console
+git checkout 1-project-init
+```
