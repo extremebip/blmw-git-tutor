@@ -23,9 +23,11 @@ function JobListing({ job }: { job: Job }) {
 
         <div className="mb-5">{description}</div>
 
+
         <button
           onClick={() => setShowFullDescription(prevState => !prevState)}
           className="text-indigo-500 mb-5 hover:text-indigo-600"
+          hidden={!(description.length > 90)}
         >
           {showFullDescription ? 'Less' : 'More'}
         </button>
