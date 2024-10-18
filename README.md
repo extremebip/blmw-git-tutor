@@ -9,5 +9,5 @@ In this exercise, you will make a pull request from your own `3-pull-request` br
 Once you have solved these challenges, make a pull request with:
 1. Title: Short and Descriptive.
 2. Description: Explain the issue, what caused it and what do you change.
-3. Reviewers: Assign it to me.
-4. Labels: Add label `bug` and `enhancement`.
+3. ~~Reviewers: Assign it to me.~~
+4. ~~Labels: Add label `bug` and `enhancement`.~~
