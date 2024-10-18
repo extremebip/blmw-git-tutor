@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Job } from "../types/Job";
-import { FaMapMarker } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Job } from '../types/Job';
+import { FaMapMarker } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function JobListing({ job }: { job: Job }) {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -9,7 +9,8 @@ function JobListing({ job }: { job: Job }) {
   let description = job.description;
 
   if (!showFullDescription) {
-    description = description.substring(0, 90) + "...";
+    description =
+      description.substring(0, 90) + (description.length > 90) ? '...' : '';
   }
 
   return (
@@ -22,11 +23,13 @@ function JobListing({ job }: { job: Job }) {
 
         <div className="mb-5">{description}</div>
 
+
         <button
-          onClick={() => setShowFullDescription((prevState) => !prevState)}
+          onClick={() => setShowFullDescription(prevState => !prevState)}
           className="text-indigo-500 mb-5 hover:text-indigo-600"
+          hidden={!(description.length > 90)}
         >
-          {showFullDescription ? "Less" : "More"}
+          {showFullDescription ? 'Less' : 'More'}
         </button>
 
         <h3 className="text-indigo-500 mb-2">{job.salary} / Year</h3>
