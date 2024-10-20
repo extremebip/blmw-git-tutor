@@ -14,7 +14,7 @@ const JobPage = ({ deleteJob }: { deleteJob: DeleteJobAction }) => {
 
     if (!confirm) return;
 
-    deleteJob("id" + id);
+    deleteJob(id);
 
     toast.success("Job Deleted Successfully!");
 
